@@ -1,0 +1,229 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white/80 backdrop-blur-sm rounded-3xl p-6 md:p-8 shadow-xl border-2 border-white/50;
+    animation: slideUp 0.6s ease-out;
+  }
+
+  .result-card {
+    @apply bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg border-2 border-white/60 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl;
+    animation: slideUp 0.6s ease-out;
+  }
+
+  .affirmation-card {
+    @apply bg-gradient-to-r from-pink-100 to-purple-100 rounded-2xl p-6 text-center shadow-lg border-2 border-pink-200 transform transition-all duration-300 hover:scale-105;
+    animation: slideUp 0.8s ease-out;
+  }
+
+  .input-group {
+    @apply space-y-2;
+    animation: slideUp 0.4s ease-out;
+  }
+
+  .label {
+    @apply flex items-center gap-2 text-sm md:text-base font-semibold text-gray-700;
+  }
+
+  .select {
+    @apply w-full px-4 py-3 rounded-xl border-2 border-purple-200 bg-white/90 focus:border-purple-400 focus:ring-4 focus:ring-purple-200 transition-all duration-200 text-gray-700 cursor-pointer;
+  }
+
+  .submit-btn {
+    @apply w-full bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 text-white font-bold py-4 px-6 rounded-2xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 text-lg;
+    animation: pulse 2s infinite;
+  }
+
+  .reset-btn {
+    @apply w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold py-3 px-6 rounded-2xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 text-base md:text-lg;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes snowfall {
+  0% {
+    transform: translateY(-10vh) translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) translateX(50px);
+    opacity: 0.3;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 3s linear infinite;
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 2s ease-in-out infinite;
+}
+
+.snowflakes {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.snowflake {
+  position: absolute;
+  top: -10vh;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+  animation: snowfall linear infinite;
+}
+
+.snowflake:nth-child(1) {
+  left: 10%;
+  animation-duration: 12s;
+  animation-delay: 0s;
+  font-size: 1.2rem;
+}
+
+.snowflake:nth-child(2) {
+  left: 20%;
+  animation-duration: 15s;
+  animation-delay: 2s;
+  font-size: 1.8rem;
+}
+
+.snowflake:nth-child(3) {
+  left: 30%;
+  animation-duration: 10s;
+  animation-delay: 1s;
+  font-size: 1.5rem;
+}
+
+.snowflake:nth-child(4) {
+  left: 40%;
+  animation-duration: 18s;
+  animation-delay: 3s;
+  font-size: 1.3rem;
+}
+
+.snowflake:nth-child(5) {
+  left: 50%;
+  animation-duration: 13s;
+  animation-delay: 0s;
+  font-size: 2rem;
+}
+
+.snowflake:nth-child(6) {
+  left: 60%;
+  animation-duration: 16s;
+  animation-delay: 4s;
+  font-size: 1.4rem;
+}
+
+.snowflake:nth-child(7) {
+  left: 70%;
+  animation-duration: 11s;
+  animation-delay: 1s;
+  font-size: 1.6rem;
+}
+
+.snowflake:nth-child(8) {
+  left: 80%;
+  animation-duration: 14s;
+  animation-delay: 2s;
+  font-size: 1.7rem;
+}
+
+.snowflake:nth-child(9) {
+  left: 90%;
+  animation-duration: 17s;
+  animation-delay: 3s;
+  font-size: 1.4rem;
+}
+
+.snowflake:nth-child(10) {
+  left: 95%;
+  animation-duration: 12s;
+  animation-delay: 5s;
+  font-size: 1.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
