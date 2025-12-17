@@ -17,79 +17,79 @@ function App() {
   const generateHoroscope = () => {
     const luckMessages = {
       high: [
-        "Congrats, your code will compile on the first try (probably not but we can dream 🎉)",
-        "A recruiter will finally slide into your DMs... to sell you crypto 📧",
-        "You're manifesting that offer so hard the universe is getting embarrassed 💫",
-        "The tech gods are smiling upon you! (They're usually crying but today's your day ✨)"
+        "Your code will compile on the first try??? WHAT IS THIS SORCERY 🎉 (fake news but manifesting it anyway)",
+        "Babe, a recruiter just slid into your DMs... it's a bot but we're counting it 📧",
+        "You're about to manifest an offer so hard LinkedIn will need therapy 💫",
+        "The tech gods woke up and chose YOU (they usually choose chaos but today's your day ✨)"
       ],
       mid: [
-        "It's giving... 'was that the job interview or am I still in the waiting room?' energy 💅",
-        "Your career path is basically a choose-your-own-adventure book written by someone having a breakdown 📖",
-        "You're doing fine! By fine I mean existing. That's something! ✌️",
-        "The universe is like 'yeah sure, let's see where this goes' 🤷‍♀️"
+        "Career vibes: ✨ Existing but make it professional ✨ 💅",
+        "Your trajectory is giving 'Stack Overflow thread with no answers' energy 📖",
+        "You're mid, fam. Not great, not terrible, just vibing like a Node.js app on life support ✌️",
+        "The universe: 'Let me just... see what happens if I do THIS' 🤷‍♀️"
       ],
       chaotic: [
-        "Your career path looks like your git history... and that's not a compliment 😅",
-        "Mercury retrograde heard you had a plan and said 'not on my watch' 🪐",
-        "The universe took one look at your resume and decided you needed character development 💀",
-        "You're the main character in a debugging arc (season 47, still no resolution 🎭)"
+        "Your career looks like someone's first GitHub commit... absolutely unhinged 😅",
+        "Mercury retrograde: Hold my beer (your beer, actually, you drank it while debugging) 🪐",
+        "Your resume made the universe laugh so hard it spilled coffee on it 💀",
+        "You're in season 47 of 'Debugging My Life' and the plot is LOST 🎭"
       ]
     };
 
     const burnoutMessages = {
       danger: [
-        "BESTIE. S.L.E.E.P. Your code will still be broken tomorrow and that's fine 😭",
-        "Your body isn't a machine, but you're speedrunning the Burnout% world record 🚨",
-        "The burnout has entered the chat and brought friends. This is an emergency 💀",
-        "Your future self is not just begging you to rest, she's threatening legal action 🛑"
+        "BESTIE. S.L.E.E.P. Rn. Your bugs will still be there, sadder, tomorrow 😭",
+        "You're not a machine (spoiler: machines need maintenance too lmaooo) 🚨",
+        "Burnout entered the call and brought its whole friend group. EMERGENCY STATUS 💀",
+        "Your future self is writing a strongly-worded email to your past self 🛑"
       ],
       warning: [
-        "You're walking a tightrope made of coffee and spite (not sustainable) ⚠️",
-        "Consider a nap. No, actually, DEMAND a nap. Fight people for it 💭",
-        "Your work-life balance has a 404 error. It's not found anywhere 🔧",
-        "Burnout is the main character now and you're the side plot. Reclaim your narrative! 👀"
+        "You're on a coffee-fueled tightrope while spite does backflips (gravity exists bestie) ⚠️",
+        "NAP. NOW. Fight a recruiter if you have to, they owe you 💭",
+        "Your work-life balance threw a 404 error and dipped 🔧",
+        "Burnout said 'main character energy' and you're like 'okay but can I sleep tho?' 👀"
       ],
       good: [
-        "You're actually sleeping? Legend behavior, honestly respect 👑",
-        "Your self-care routine has us all shook (and weeping with jealousy) 💕",
-        "You're thriving AND resting? In THIS economy?? Teach us your ways ✨",
-        "The vibes? Immaculate. The rest schedule? Unmatched. The serotonin levels? High 🌸"
+        "OKAY LEGEND??? You're sleeping????? I'm taking notes 👑",
+        "Your self-care is so immaculate we're all just... crying in the code 💕",
+        "You're thriving AND well-rested??? Teach us your ancient magic 🧙‍♀️ ✨",
+        "Bestie, the vibes are SENDING. The rest? UNMATCHED. The energy? RENEWABLE 🌸"
       ]
     };
 
     const internshipMessages = [
-      "A startup will offer you 'exposure and equity' (cool, you can pay rent with vibes now 🏃‍♀️)",
-      "You'll ghost a recruiter by accident and then stalk their LinkedIn for weeks 👻",
-      "Your dream company will finally respond! In 2027, but who's counting 📧",
-      "Plot twist: The entry-level role requires your life story, your soul, AND 7 years of experience 🤡",
-      "You'll ace the interview and immediately bomb the 'reverse string' question 💔",
-      "Your random side project will blow up while your professional work gets crickets 📱",
-      "They'll reject you but keep your resume in the 'maybe never' pile 🗑️",
-      "LinkedIn will become your personality (send help and better algorithms) 💼",
-      "You'll make ONE networking connection that works out and tell that story forever 🎉",
-      "Your portfolio site will have a critical error the DAY of your interview (Murphy's Law is real) 💻"
+      "Startup: 'We offer exposure + equity!' You: 'Can I eat exposure?' (no) 🏃‍♀️",
+      "You'll accidentally ghost a recruiter and THEN SPIRAL about it for 2 weeks 👻",
+      "Your dream company will reply! Only took 847 days 📧",
+      "Entry level: 'we want someone with 0 experience' = actually wants 7 years + your firstborn 🤡",
+      "You'll demolish that interview then CHOKE on the LeetCode like a amateur 💔",
+      "Your random side project gets 10k stars meanwhile your actual job gets 404'd 📱",
+      "Rejection email subject line: 'We're keeping your resume for... *never*' 🗑️",
+      "LinkedIn is now your personality, your diary, and your therapist combined 💼",
+      "One recruiter won't ghost you and you'll mention it FOREVER (certified legend status 🎉)",
+      "Your portfolio crashes EXACTLY when they click the link (the algorithm hates women in tech 💻)"
     ];
 
     const delululInternshipMessages = [
-      "Sundar Pichai will personally beg you to join Google (he's on his knees rn 📞✨)",
-      "You'll have 5M followers by next week because the algorithm has a crush on you 🌟",
-      "MoMA will display your code next to the Mona Lisa (it's just that beautiful 🎨)",
-      "You'll accidentally invent something that changes humanity and retire before your first day 💰",
-      "Every FAANG will have a bidding war for you (bullets flying, it's chaotic 🪓)",
-      "You'll fix the entire company's infrastructure solo and they'll make you VP 🦸‍♀️",
-      "Your LinkedIn post will go so viral Elon will buy your tweet for millions 🚀",
-      "A company will invent itself just to hire you (that's how good you are 🔮)"
+      "Sundar Pichai is personally BEGGING. On knees. Crying. Check ur phone 📞✨",
+      "5M followers overnight bc the algorithm fell in love w u (it's giving obsessed) 🌟",
+      "MOMA wants your code. Side by side with the Mona Lisa. (Louvre called they're mad) 🎨",
+      "You accidentally invent AGI and retire with your cat at 22 💰",
+      "FAANG CEOs are literally FIGHTING over you (Octagon match vibes 🪓)",
+      "You walk into your first day, fix EVERYTHING, and they make you CEO 🦸‍♀️",
+      "Your LinkedIn post breaks Twitter (yes it's still called that in this reality) 🚀",
+      "A startup materializes from thin air just to hire you (you're THAT good 🔮)"
     ];
 
     const affirmations = [
-      "You're doing better than you think (and way better than your imposter brain says 💕)",
-      "Imposter syndrome is a liar and you should fight her 💅",
-      "Your code might be a hot mess but it's YOUR hot mess (and that's valid 🎨)",
-      "You belong in tech, full stop, no asterisks, no 'but actually's ✨",
-      "Everyone's faking it too, they're just better at hiding the chaos 🌈",
-      "Bad code days are just data collection for good code days (trust the process 💝)",
-      "Your GitHub is not your personality (shocking but true 🌟)",
-      "Rest is literally a feature, not a bug in your career 🛌"
+      "You're doing better than you think (your imposter brain is broke, don't believe her 💕)",
+      "Imposter syndrome is a LIAR. Punch her in the face (metaphorically) 💅",
+      "Your code is a beautiful hot mess and THAT'S called artistic expression bestie 🎨",
+      "You belong in tech, full stop, no debates, no 'well actually's ✨",
+      "Every senior dev is also googling 'how to center a div' at 3am, they're just cocky 🌈",
+      "Bad code days are just your brain collecting data for the glow-up 💝",
+      "Your GitHub is not your vibe, your PERSONALITY is (and it slaps 🌟)",
+      "Resting is a FEATURE not a BUG get that in ur head queen 🛌"
     ];
 
     let luckLevel = 'mid';
